@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template for Isaac Lab Projects
 
 ## Overview
@@ -133,3 +134,6 @@ Some examples of packages that can likely be excluded are:
 "<path-to-isaac-sim>/extscache/omni.services.*"     // Services tools
 ...
 ```
+=======
+# IsaacLAB_LEAPHAND_Project
+>>>>>>> 9a06de0c614a8471c8ef16e8ac1008b6cabd2d1c
