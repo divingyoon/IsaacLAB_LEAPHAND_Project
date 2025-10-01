@@ -1,0 +1,221 @@
+<?xml version="1.0" ?>
+<robot name="no_arm_isaac" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find no_arm_isaac_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find no_arm_isaac_description)/urdf/no_arm_isaac.trans" />
+<xacro:include filename="$(find no_arm_isaac_description)/urdf/no_arm_isaac.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-1.1199098829630538e-09 -7.816768965557578e-10 0.12500000000153696" rpy="0 0 0"/>
+    <mass value="7.696230008793844"/>
+    <inertia ixx="0.047505" iyy="0.06309" izz="0.030426" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find no_arm_isaac_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find no_arm_isaac_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="under_body_1">
+  <inertial>
+    <origin xyz="-5.013647926527235e-08 0.00622055079965131 0.04499999302709212" rpy="0 0 0"/>
+    <mass value="4.771661651159625"/>
+    <inertia ixx="0.009017" iyy="0.047415" izz="0.04723" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.0 -0.25" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find no_arm_isaac_description)/meshes/under_body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.0 -0.25" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find no_arm_isaac_description)/meshes/under_body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="upper_body_1">
+  <inertial>
+    <origin xyz="-9.306588989029795e-15 0.006220550236925543 0.04499999920685571" rpy="0 0 0"/>
+    <mass value="4.771662083263037"/>
+    <inertia ixx="0.009017" iyy="0.047415" izz="0.04723" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.0 -0.34" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find no_arm_isaac_description)/meshes/upper_body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.0 -0.34" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find no_arm_isaac_description)/meshes/upper_body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_arm_1">
+  <inertial>
+    <origin xyz="-0.0007070887026282835 -0.000707106780450988 2.1871393585115584e-14" rpy="0 0 0"/>
+    <mass value="0.3596940231860905"/>
+    <inertia ixx="0.001214" iyy="0.001214" izz="0.000486" ixy="0.000243" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.155 -0.0 -0.34" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find no_arm_isaac_description)/meshes/right_arm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.155 -0.0 -0.34" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find no_arm_isaac_description)/meshes/right_arm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_arm_1">
+  <inertial>
+    <origin xyz="0.0007070887026179862 -0.0007071067804561445 2.015054789694659e-14" rpy="0 0 0"/>
+    <mass value="0.359751805477637"/>
+    <inertia ixx="0.001214" iyy="0.001214" izz="0.000486" ixy="-0.000243" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.155 -0.0 -0.34" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find no_arm_isaac_description)/meshes/left_arm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.155 -0.0 -0.34" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find no_arm_isaac_description)/meshes/left_arm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="under_neck_1">
+  <inertial>
+    <origin xyz="4.102805954806092e-11 -0.047894475375877724 0.021824682493119807" rpy="0 0 0"/>
+    <mass value="0.40441713327413076"/>
+    <inertia ixx="0.000136" iyy="8.2e-05" izz="0.000121" ixy="-0.0" iyz="1.1e-05" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.0266 -0.43" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find no_arm_isaac_description)/meshes/under_neck_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.0266 -0.43" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find no_arm_isaac_description)/meshes/under_neck_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="uppper_neck_1">
+  <inertial>
+    <origin xyz="-0.0003753387200590366 4.733411579360691e-11 0.027704213117066778" rpy="0 0 0"/>
+    <mass value="0.360913776197752"/>
+    <inertia ixx="9.5e-05" iyy="0.000109" izz="6e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.035 -0.472" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find no_arm_isaac_description)/meshes/uppper_neck_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.035 -0.472" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find no_arm_isaac_description)/meshes/uppper_neck_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="head_1">
+  <inertial>
+    <origin xyz="0.01900075934955458 -0.017054257253195808 0.04732392012922049" rpy="0 0 0"/>
+    <mass value="1.841200882296232"/>
+    <inertia ixx="0.000774" iyy="0.002034" izz="0.002299" ixy="1e-06" iyz="1e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.019 0.035 -0.5125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find no_arm_isaac_description)/meshes/head_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.019 0.035 -0.5125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find no_arm_isaac_description)/meshes/head_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="fix_1" type="fixed">
+  <origin xyz="0.0 0.0 0.25" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="under_body_1"/>
+</joint>
+
+<joint name="fix_2" type="fixed">
+  <origin xyz="-0.0 0.0 0.09" rpy="0 0 0"/>
+  <parent link="under_body_1"/>
+  <child link="upper_body_1"/>
+</joint>
+
+<joint name="r_fix" type="fixed">
+  <origin xyz="-0.155 0.0 0.0" rpy="0 0 0"/>
+  <parent link="upper_body_1"/>
+  <child link="right_arm_1"/>
+</joint>
+
+<joint name="l_fix" type="fixed">
+  <origin xyz="0.155 0.0 0.0" rpy="0 0 0"/>
+  <parent link="upper_body_1"/>
+  <child link="left_arm_1"/>
+</joint>
+
+<joint name="h_fix" type="fixed">
+  <origin xyz="0.0 0.0266 0.09" rpy="0 0 0"/>
+  <parent link="upper_body_1"/>
+  <child link="under_neck_1"/>
+</joint>
+
+<joint name="neck_down" type="revolute">
+  <origin xyz="0.0 -0.0616 0.042" rpy="0 0 0"/>
+  <parent link="under_neck_1"/>
+  <child link="uppper_neck_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+</joint>
+
+<joint name="neck_up" type="revolute">
+  <origin xyz="-0.019 0.0 0.0405" rpy="0 0 0"/>
+  <parent link="uppper_neck_1"/>
+  <child link="head_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+  <limit upper="0.959931" lower="-1.48353" effort="100" velocity="100"/>
+</joint>
+
+</robot>

@@ -1,0 +1,9 @@
+
+# Ignore ROS 2 workspace generated files
+humble_ws/build/
+humble_ws/install/
+humble_ws/log/
+
+# Ignore other common generated files
+lab_test1/logs/
+lab_test1/outputs/
